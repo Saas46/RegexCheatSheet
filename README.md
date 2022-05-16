@@ -8,14 +8,14 @@ The Fat cat ran down the street.
 It was searching for a mouse to eat.
 `
 
-###Flags
+## Flags
 
 `/g` - global will allow you to match anywhere in string  eg: cat  `/at/g`
 
 `/i` - case in sensitive. So, it will match lower as well as upper case eg: 'the', 'The'  `/the/gi`
 
 
-###Selector
+## Selector
 `ea?` - so '?'' will make before word makes optional. So 'e' will be matched where as 'a' is optional. eg: e, ea `/ea?/`
 
 `re*` - '*' will match zero or more character so all the word 'r', 'e' or multiple combination eg: reeereere  `/re*/`
@@ -37,12 +37,11 @@ It was searching for a mouse to eat.
 `^t` - match 't' at beginning of the line. it only needs multiline flag '/i' inorder to select in multiple line.  `/^t/`
 
 `\s$` - match any 'space' of each end of line. It can be 'word, number'$ eg: (\s|\.)$ match any space or full stop of each end of line. `/\s$/`
-###Group Selector
+## Group Selector
 `[fc]at` - [] match anything inside bracket and 'at' will select all the word 'at'. eg fat, [f]at, cat, [c]at, catalyst, [c]at .... `/[fc]at/`
 
-#### Capture Grouping (select word and make its own group)
+## Capture Grouping (select word and make its own group)
 `(t|T)he` - match _he and first letter is either lower or uppercase. eg either select eg: the, The `/(t|T)/`
-
 
 ##Range selector
 `[a-z]`- match all the letter starts from a to z or can match the capital letter as well using 'i' flag (case in-sensitive) `/[a-z]/i`
